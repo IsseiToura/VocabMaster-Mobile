@@ -1,0 +1,459 @@
+{
+  "v": 6,
+  "name": "Vocab_master",
+  "folders": [
+    {
+      "v": 6,
+      "name": "Auth",
+      "folders": [],
+      "requests": [
+        {
+          "v": "11",
+          "name": "Login",
+          "method": "POST",
+          "endpoint": "<<baseUrl>>/auth/login",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": "application/json",
+            "body": "{\n  \"ieltsLevel\": 6\n}"
+          },
+          "requestVariables": [],
+          "responses": {}
+        },
+        {
+          "v": "11",
+          "name": "Register",
+          "method": "POST",
+          "endpoint": "<<baseUrl>>/auth/register",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": "application/json",
+            "body": "{\n  \"username\": \"Issei\",\n  \"password\": \"111\"\n}"
+          },
+          "requestVariables": [],
+          "responses": {}
+        }
+      ],
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "headers": [],
+      "_ref_id": "coll_m9xiav70_791a85dd-5e61-4482-874a-79d8f789add0"
+    },
+    {
+      "v": 6,
+      "name": "Words Generate",
+      "folders": [],
+      "requests": [
+        {
+          "v": "11",
+          "name": "Generate New Words",
+          "method": "POST",
+          "endpoint": "<<baseUrl>>/words_generate",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": "application/json",
+            "body": "{\n  \"ieltsLevel\": 6\n}"
+          },
+          "requestVariables": [],
+          "responses": {}
+        },
+        {
+          "v": "11",
+          "name": "Save Generated New Words",
+          "method": "POST",
+          "endpoint": "<<baseUrl>>/words_generate/save_selected",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": "application/json",
+            "body": "{\n  \"wordIds\":[\"680c30a4a4b8cb004f962e7a\", \"680c30a4a4b8cb004f962e7b\"]\n}"
+          },
+          "requestVariables": [],
+          "responses": {}
+        }
+      ],
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "headers": [],
+      "_ref_id": "coll_m9xigrbk_489d2fae-f947-43d3-a92c-d0f9371ec2ef"
+    },
+    {
+      "v": 6,
+      "name": "Your Words",
+      "folders": [],
+      "requests": [
+        {
+          "v": "11",
+          "name": "Get All Your Words",
+          "method": "GET",
+          "endpoint": "<<baseUrl>>/your_words",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": "application/json",
+            "body": "{\n  \"wordIds\":[\"680c30a4a4b8cb004f962e7a\", \"680c30a4a4b8cb004f962e7b\"]\n}"
+          },
+          "requestVariables": [],
+          "responses": {}
+        },
+        {
+          "v": "11",
+          "name": "Create Your Word",
+          "method": "POST",
+          "endpoint": "<<baseUrl>>/your_words",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": "application/json",
+            "body": "{\n  \"word\": \"banana\",\n  \"meaning\": \"バナナ\"\n}"
+          },
+          "requestVariables": [],
+          "responses": {}
+        },
+        {
+          "v": "11",
+          "name": "Get Your Word by ID",
+          "method": "GET",
+          "endpoint": "<<baseUrl>>/your_words/680c79c9a4b8cb004f962e86",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": "application/json",
+            "body": ""
+          },
+          "requestVariables": [],
+          "responses": {}
+        },
+        {
+          "v": "11",
+          "name": "Update Your Word by ID",
+          "method": "PUT",
+          "endpoint": "<<baseUrl>>/your_words/680c79c9a4b8cb004f962e86",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": "application/json",
+            "body": "{\n  \"word\": \"apple\",\n  \"meaning\": \"りんご\",\n  \"example\": \"I ate an apple.\",\n  \"ieltsLevel\": 3\n}"
+          },
+          "requestVariables": [],
+          "responses": {}
+        },
+        {
+          "v": "11",
+          "name": "Delete Your Word by ID",
+          "method": "DELETE",
+          "endpoint": "<<baseUrl>>/your_words/680c79c9a4b8cb004f962e86",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": "application/json",
+            "body": "{\n  \"word\": \"apple\",\n  \"meaning\": \"りんご\",\n  \"example\": \"I ate an apple.\",\n  \"ieltsLevel\": 3\n}"
+          },
+          "requestVariables": [],
+          "responses": {}
+        }
+      ],
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "headers": [],
+      "_ref_id": "coll_m9xtpj3v_95b6d160-73e0-44e5-8bb2-e7e9899451ee"
+    },
+    {
+      "v": 6,
+      "name": "Practice History",
+      "folders": [],
+      "requests": [
+        {
+          "v": "11",
+          "name": "Get All Practice Histories",
+          "method": "GET",
+          "endpoint": "<<baseUrl>>/practice_histories",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": "application/json",
+            "body": "{\n  \"word\": \"apple\",\n  \"meaning\": \"りんご\",\n  \"example\": \"I ate an apple.\",\n  \"ieltsLevel\": 3\n}"
+          },
+          "requestVariables": [],
+          "responses": {}
+        },
+        {
+          "v": "11",
+          "name": "Create Practice History",
+          "method": "POST",
+          "endpoint": "<<baseUrl>>/practice/",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": "application/json",
+            "body": "{\n  \"wordResults\": [\n      {\n        \"wordId\": {\n          \"_id\": \"6800ef848d7f62adb5ff447d\",\n          \"word\": \"contribute\",\n          \"meaning\": \"貢献する\"\n        },\n        \"isCorrect\": false,\n        \"_id\": \"680746d1e4487c5d05a0f2d9\"\n      },\n      {\n        \"wordId\": {\n          \"_id\": \"68030dfdbc77ca59999a6cab\",\n          \"word\": \"increase\",\n          \"meaning\": \"増加する\"\n        },\n        \"isCorrect\": false,\n        \"_id\": \"680746d1e4487c5d05a0f2da\"\n      },\n      {\n        \"wordId\": {\n          \"_id\": \"680471cda9ae01944f06ba5d\",\n          \"word\": \"innovative\",\n          \"meaning\": \"革新的な、斬新な\"\n        },\n        \"isCorrect\": false,\n        \"_id\": \"680746d1e4487c5d05a0f2db\"\n      },\n      {\n        \"wordId\": {\n          \"_id\": \"680471cda9ae01944f06ba5c\",\n          \"word\": \"ambiguous\",\n          \"meaning\": \"あいまいな、曖昧な\"\n        },\n        \"isCorrect\": false,\n        \"_id\": \"680746d1e4487c5d05a0f2dc\"\n      },\n      {\n        \"wordId\": {\n          \"_id\": \"68030dfdbc77ca59999a6ca9\",\n          \"word\": \"benefit\",\n          \"meaning\": \"利益、恩恵\"\n        },\n        \"isCorrect\": false,\n        \"_id\": \"680746d1e4487c5d05a0f2dd\"\n      },\n      {\n        \"wordId\": {\n          \"_id\": \"68030f0dbc77ca59999a6cbd\",\n          \"word\": \"phone\",\n          \"meaning\": \"電話\"\n        },\n        \"isCorrect\": false,\n        \"_id\": \"680746d1e4487c5d05a0f2de\"\n      },\n      {\n        \"wordId\": {\n          \"_id\": \"6804609ba9ae01944f06ba23\",\n          \"word\": \"ubiquitous\",\n          \"meaning\": \"遍在する\"\n        },\n        \"isCorrect\": false,\n        \"_id\": \"680746d1e4487c5d05a0f2df\"\n      },\n      {\n        \"wordId\": {\n          \"_id\": \"6804af6ef868099471c15d93\",\n          \"word\": \"diligent\",\n          \"meaning\": \"勤勉な\"\n        },\n        \"isCorrect\": false,\n        \"_id\": \"680746d1e4487c5d05a0f2e0\"\n      },\n      {\n        \"wordId\": {\n          \"_id\": \"6804609ba9ae01944f06ba24\",\n          \"word\": \"cognizant\",\n          \"meaning\": \"認識している\"\n        },\n        \"isCorrect\": false,\n        \"_id\": \"680746d1e4487c5d05a0f2e1\"\n      },\n      {\n        \"wordId\": {\n          \"_id\": \"680471cda9ae01944f06ba5b\",\n          \"word\": \"meticulous\",\n          \"meaning\": \"細心な、入念な\"\n        },\n        \"isCorrect\": true,\n        \"_id\": \"680746d1e4487c5d05a0f2e2\"\n      }\n    ],\n    \"score\": 1,\n    \"totalQuestions\": 10\n}"
+          },
+          "requestVariables": [],
+          "responses": {}
+        },
+        {
+          "v": "11",
+          "name": "Get Practice History by ID",
+          "method": "GET",
+          "endpoint": "<<baseUrl>>/practice_histories/680746d1e4487c5d05a0f2d8",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": "application/json",
+            "body": "{\n  \"word\": \"apple\",\n  \"meaning\": \"りんご\",\n  \"example\": \"I ate an apple.\",\n  \"ieltsLevel\": 3\n}"
+          },
+          "requestVariables": [],
+          "responses": {}
+        },
+        {
+          "v": "11",
+          "name": "Update Practice Historie by ID",
+          "method": "PUT",
+          "endpoint": "<<baseUrl>>/practice_histories/680746d1e4487c5d05a0f2d8",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": "application/json",
+            "body": "{\n  \"wordResults\": [\n      {\n        \"wordId\": {\n          \"_id\": \"6800ef848d7f62adb5ff447d\",\n          \"word\": \"contribute\",\n          \"meaning\": \"貢献する\"\n        },\n        \"isCorrect\": false,\n        \"_id\": \"680746d1e4487c5d05a0f2d9\"\n      },\n      {\n        \"wordId\": {\n          \"_id\": \"68030dfdbc77ca59999a6cab\",\n          \"word\": \"increase\",\n          \"meaning\": \"増加する\"\n        },\n        \"isCorrect\": false,\n        \"_id\": \"680746d1e4487c5d05a0f2da\"\n      },\n      {\n        \"wordId\": {\n          \"_id\": \"680471cda9ae01944f06ba5d\",\n          \"word\": \"innovative\",\n          \"meaning\": \"革新的な、斬新な\"\n        },\n        \"isCorrect\": false,\n        \"_id\": \"680746d1e4487c5d05a0f2db\"\n      },\n      {\n        \"wordId\": {\n          \"_id\": \"680471cda9ae01944f06ba5c\",\n          \"word\": \"ambiguous\",\n          \"meaning\": \"あいまいな、曖昧な\"\n        },\n        \"isCorrect\": false,\n        \"_id\": \"680746d1e4487c5d05a0f2dc\"\n      },\n      {\n        \"wordId\": {\n          \"_id\": \"68030dfdbc77ca59999a6ca9\",\n          \"word\": \"benefit\",\n          \"meaning\": \"利益、恩恵\"\n        },\n        \"isCorrect\": false,\n        \"_id\": \"680746d1e4487c5d05a0f2dd\"\n      },\n      {\n        \"wordId\": {\n          \"_id\": \"68030f0dbc77ca59999a6cbd\",\n          \"word\": \"phone\",\n          \"meaning\": \"電話\"\n        },\n        \"isCorrect\": false,\n        \"_id\": \"680746d1e4487c5d05a0f2de\"\n      },\n      {\n        \"wordId\": {\n          \"_id\": \"6804609ba9ae01944f06ba23\",\n          \"word\": \"ubiquitous\",\n          \"meaning\": \"遍在する\"\n        },\n        \"isCorrect\": false,\n        \"_id\": \"680746d1e4487c5d05a0f2df\"\n      },\n      {\n        \"wordId\": {\n          \"_id\": \"6804af6ef868099471c15d93\",\n          \"word\": \"diligent\",\n          \"meaning\": \"勤勉な\"\n        },\n        \"isCorrect\": false,\n        \"_id\": \"680746d1e4487c5d05a0f2e0\"\n      },\n      {\n        \"wordId\": {\n          \"_id\": \"6804609ba9ae01944f06ba24\",\n          \"word\": \"cognizant\",\n          \"meaning\": \"認識している\"\n        },\n        \"isCorrect\": true,\n        \"_id\": \"680746d1e4487c5d05a0f2e1\"\n      },\n      {\n        \"wordId\": {\n          \"_id\": \"680471cda9ae01944f06ba5b\",\n          \"word\": \"meticulous\",\n          \"meaning\": \"細心な、入念な\"\n        },\n        \"isCorrect\": true,\n        \"_id\": \"680746d1e4487c5d05a0f2e2\"\n      }\n    ],\n    \"score\": 2,\n    \"totalQuestions\": 10\n}"
+          },
+          "requestVariables": [],
+          "responses": {}
+        },
+        {
+          "v": "11",
+          "name": "Delete Practice Historie by ID",
+          "method": "DELETE",
+          "endpoint": "<<baseUrl>>/practice_histories/680746d1e4487c5d05a0f2d8",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": "application/json",
+            "body": "{\n  \"wordResults\": [\n      {\n        \"wordId\": {\n          \"_id\": \"6800ef848d7f62adb5ff447d\",\n          \"word\": \"contribute\",\n          \"meaning\": \"貢献する\"\n        },\n        \"isCorrect\": false,\n        \"_id\": \"680746d1e4487c5d05a0f2d9\"\n      },\n      {\n        \"wordId\": {\n          \"_id\": \"68030dfdbc77ca59999a6cab\",\n          \"word\": \"increase\",\n          \"meaning\": \"増加する\"\n        },\n        \"isCorrect\": false,\n        \"_id\": \"680746d1e4487c5d05a0f2da\"\n      },\n      {\n        \"wordId\": {\n          \"_id\": \"680471cda9ae01944f06ba5d\",\n          \"word\": \"innovative\",\n          \"meaning\": \"革新的な、斬新な\"\n        },\n        \"isCorrect\": false,\n        \"_id\": \"680746d1e4487c5d05a0f2db\"\n      },\n      {\n        \"wordId\": {\n          \"_id\": \"680471cda9ae01944f06ba5c\",\n          \"word\": \"ambiguous\",\n          \"meaning\": \"あいまいな、曖昧な\"\n        },\n        \"isCorrect\": false,\n        \"_id\": \"680746d1e4487c5d05a0f2dc\"\n      },\n      {\n        \"wordId\": {\n          \"_id\": \"68030dfdbc77ca59999a6ca9\",\n          \"word\": \"benefit\",\n          \"meaning\": \"利益、恩恵\"\n        },\n        \"isCorrect\": false,\n        \"_id\": \"680746d1e4487c5d05a0f2dd\"\n      },\n      {\n        \"wordId\": {\n          \"_id\": \"68030f0dbc77ca59999a6cbd\",\n          \"word\": \"phone\",\n          \"meaning\": \"電話\"\n        },\n        \"isCorrect\": false,\n        \"_id\": \"680746d1e4487c5d05a0f2de\"\n      },\n      {\n        \"wordId\": {\n          \"_id\": \"6804609ba9ae01944f06ba23\",\n          \"word\": \"ubiquitous\",\n          \"meaning\": \"遍在する\"\n        },\n        \"isCorrect\": false,\n        \"_id\": \"680746d1e4487c5d05a0f2df\"\n      },\n      {\n        \"wordId\": {\n          \"_id\": \"6804af6ef868099471c15d93\",\n          \"word\": \"diligent\",\n          \"meaning\": \"勤勉な\"\n        },\n        \"isCorrect\": false,\n        \"_id\": \"680746d1e4487c5d05a0f2e0\"\n      },\n      {\n        \"wordId\": {\n          \"_id\": \"6804609ba9ae01944f06ba24\",\n          \"word\": \"cognizant\",\n          \"meaning\": \"認識している\"\n        },\n        \"isCorrect\": true,\n        \"_id\": \"680746d1e4487c5d05a0f2e1\"\n      },\n      {\n        \"wordId\": {\n          \"_id\": \"680471cda9ae01944f06ba5b\",\n          \"word\": \"meticulous\",\n          \"meaning\": \"細心な、入念な\"\n        },\n        \"isCorrect\": true,\n        \"_id\": \"680746d1e4487c5d05a0f2e2\"\n      }\n    ],\n    \"score\": 2,\n    \"totalQuestions\": 10\n}"
+          },
+          "requestVariables": [],
+          "responses": {}
+        }
+      ],
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "headers": [],
+      "_ref_id": "coll_m9xtzlj7_2329e3cc-469c-4343-8b42-5c2804bfa811"
+    },
+    {
+      "v": 6,
+      "name": "User (for only admin)",
+      "folders": [],
+      "requests": [
+        {
+          "v": "11",
+          "name": "Get All Users",
+          "method": "GET",
+          "endpoint": "<<baseUrl>>/admin",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": "application/json",
+            "body": "{\n  \"wordResults\": [\n      {\n        \"wordId\": {\n          \"_id\": \"6800ef848d7f62adb5ff447d\",\n          \"word\": \"contribute\",\n          \"meaning\": \"貢献する\"\n        },\n        \"isCorrect\": false,\n        \"_id\": \"680746d1e4487c5d05a0f2d9\"\n      },\n      {\n        \"wordId\": {\n          \"_id\": \"68030dfdbc77ca59999a6cab\",\n          \"word\": \"increase\",\n          \"meaning\": \"増加する\"\n        },\n        \"isCorrect\": false,\n        \"_id\": \"680746d1e4487c5d05a0f2da\"\n      },\n      {\n        \"wordId\": {\n          \"_id\": \"680471cda9ae01944f06ba5d\",\n          \"word\": \"innovative\",\n          \"meaning\": \"革新的な、斬新な\"\n        },\n        \"isCorrect\": false,\n        \"_id\": \"680746d1e4487c5d05a0f2db\"\n      },\n      {\n        \"wordId\": {\n          \"_id\": \"680471cda9ae01944f06ba5c\",\n          \"word\": \"ambiguous\",\n          \"meaning\": \"あいまいな、曖昧な\"\n        },\n        \"isCorrect\": false,\n        \"_id\": \"680746d1e4487c5d05a0f2dc\"\n      },\n      {\n        \"wordId\": {\n          \"_id\": \"68030dfdbc77ca59999a6ca9\",\n          \"word\": \"benefit\",\n          \"meaning\": \"利益、恩恵\"\n        },\n        \"isCorrect\": false,\n        \"_id\": \"680746d1e4487c5d05a0f2dd\"\n      },\n      {\n        \"wordId\": {\n          \"_id\": \"68030f0dbc77ca59999a6cbd\",\n          \"word\": \"phone\",\n          \"meaning\": \"電話\"\n        },\n        \"isCorrect\": false,\n        \"_id\": \"680746d1e4487c5d05a0f2de\"\n      },\n      {\n        \"wordId\": {\n          \"_id\": \"6804609ba9ae01944f06ba23\",\n          \"word\": \"ubiquitous\",\n          \"meaning\": \"遍在する\"\n        },\n        \"isCorrect\": false,\n        \"_id\": \"680746d1e4487c5d05a0f2df\"\n      },\n      {\n        \"wordId\": {\n          \"_id\": \"6804af6ef868099471c15d93\",\n          \"word\": \"diligent\",\n          \"meaning\": \"勤勉な\"\n        },\n        \"isCorrect\": false,\n        \"_id\": \"680746d1e4487c5d05a0f2e0\"\n      },\n      {\n        \"wordId\": {\n          \"_id\": \"6804609ba9ae01944f06ba24\",\n          \"word\": \"cognizant\",\n          \"meaning\": \"認識している\"\n        },\n        \"isCorrect\": true,\n        \"_id\": \"680746d1e4487c5d05a0f2e1\"\n      },\n      {\n        \"wordId\": {\n          \"_id\": \"680471cda9ae01944f06ba5b\",\n          \"word\": \"meticulous\",\n          \"meaning\": \"細心な、入念な\"\n        },\n        \"isCorrect\": true,\n        \"_id\": \"680746d1e4487c5d05a0f2e2\"\n      }\n    ],\n    \"score\": 2,\n    \"totalQuestions\": 10\n}"
+          },
+          "requestVariables": [],
+          "responses": {}
+        },
+        {
+          "v": "11",
+          "name": "Create New User ",
+          "method": "POST",
+          "endpoint": "<<baseUrl>>/admin",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": "application/json",
+            "body": "{\n  \"username\": \"Bob\",\n  \"password\": \"111\"\n}"
+          },
+          "requestVariables": [],
+          "responses": {}
+        },
+        {
+          "v": "11",
+          "name": "Get User by ID",
+          "method": "GET",
+          "endpoint": "<<baseUrl>>/admin/680c7f713131cb7b2991fe39",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": "application/json",
+            "body": "{\n  \"username\": \"Bob\",\n  \"password\": \"111\"\n}"
+          },
+          "requestVariables": [],
+          "responses": {}
+        },
+        {
+          "v": "11",
+          "name": "Update User by ID",
+          "method": "PUT",
+          "endpoint": "<<baseUrl>>/admin/680703d71326d2faf9a94442",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": "application/json",
+            "body": "{\n  \"username\": \"Hoge\",\n  \"password\": \"111\"\n}"
+          },
+          "requestVariables": [],
+          "responses": {}
+        },
+        {
+          "v": "11",
+          "name": "Delete User by ID",
+          "method": "DELETE",
+          "endpoint": "<<baseUrl>>/admin/680c7f713131cb7b2991fe39",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": "application/json",
+            "body": "{\n  \"username\": \"Bob\",\n  \"password\": \"111\"\n}"
+          },
+          "requestVariables": [],
+          "responses": {}
+        }
+      ],
+      "auth": {
+        "authActive": true,
+        "authType": "inherit"
+      },
+      "headers": [],
+      "_ref_id": "coll_m9xtz6xm_376aed96-fc39-43da-9d5f-45a702aaa511"
+    }
+  ],
+  "requests": [],
+  "auth": {
+    "authType": "bearer",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODBlZGJlZDVkYWFmZDNmZmI2NzcxYjgiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE3NDU4MDU5ODUsImV4cCI6MTc0NTg0OTE4NX0.iMky9WqtmiA_0DYEestyhUOPHrvSnGmY1Q-YvVLV0NQ",
+    "authActive": true
+  },
+  "headers": [],
+  "_ref_id": "coll_m9xi89ar_e8997553-cd45-4f7e-a261-5df8e7289946"
+}
